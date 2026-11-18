@@ -1,0 +1,1095 @@
+/* 1. Forside */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F2EEE7;
+    color: #292D29;
+    line-height: 1.6;
+}
+
+main{
+    display: block;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+
+/* 2. MENU / NAVIGATION */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: #F2EEE7;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #303a30;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #292D29;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #89947F;
+}
+
+
+/* 3. HERO */
+
+.hero {
+    min-height: 380px;
+    display: flex;
+    width: 100%;
+    min-height: 380px;
+    align-items: center;
+    padding: 50px 6%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(242, 238, 231, 0.96),
+            rgba(242, 238, 231, 0.1)
+        ),
+        url("img/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    color: #354237;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.knap {
+    display: inline-block;
+    background-color: #596858;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.knap:hover {
+    background-color: #354237;
+}
+
+
+/* 4. META-BRILLE ARTIKEL */
+
+.featured {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 88%;
+    margin: 35px auto;
+    background-color: #E9E4DB;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.featured img {
+    width: 45%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.featured-text {
+    padding: 20px;
+}
+
+.kategori {
+    display: inline-block;
+    background-color: #B7BEA9;
+    padding: 4px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.featured h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.featured p {
+    margin-bottom: 15px;
+}
+
+.featured a,
+.article-card a {
+    color: #354237;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* 5. BLOGINDLÆG */
+
+.articles {
+    display: block;
+    width: 88%;
+    margin: 50px auto;
+}
+
+.articles > h2 {
+    font-size: 28px;
+    color: #354237;
+    margin-bottom: 25px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.article-card {
+    background-color: #E9E4DB;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 18px;
+}
+
+.article-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.article-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* 6. REFLEKSIONSFELT */
+
+.reflection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    width: 88%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #D5D9CB;
+    border-radius: 12px;
+}
+
+.reflection h2 {
+    color: #354237;
+    font-size: 25px;
+}
+
+
+/* 7. FOOTER og BUND */
+
+footer {
+    display: block;
+    width: 100%;
+    background-color: #465448;
+    color: white;
+    padding: 30px 6% 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-content h2 {
+    font-size: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+
+/* 8. RESPONSIVT DESIGN – MOBIL */
+
+@media (max-width: 768px) {
+
+    .navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 350px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .featured {
+        flex-direction: column;
+    }
+
+    .featured img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reflection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/* 9. TILGÆNGELIGHED */
+
+a:focus-visible {
+    outline: 3px solid #354237;
+    outline-offset: 4px;
+}
+
+
+
+
+
+
+/* META-BRILLER – MELLEM LINJERNE */
+
+
+/* 1. FARVER */
+
+:root {
+    --cream: #F2EEE7;
+    --card: #E9E4DB;
+    --green: #465448;
+    --green-dark: #354237;
+    --sage: #B7BEA9;
+    --text: #292D29;
+}
+
+
+/* 2. GENERELLE INDSTILLINGER */
+
+body {
+    background-color: var(--cream);
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #303a30;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+/* 3. BRØDKRUMMESTI */
+
+.breadcrumb {
+    width: 88%;
+    max-width: 1250px;
+    margin: 18px auto 12px;
+    color: #687166;
+    font-size: 13px;
+}
+
+.breadcrumb a {
+    color: var(--green-dark);
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    padding: 0 7px;
+    color: #9A9C91;
+}
+
+
+/* 4. TOPSEKTION / HERO */
+
+.meta-hero {
+    width: 88%;
+    max-width: 1250px;
+    min-height: 390px;
+    margin: 0 auto 45px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+
+    gap: 35px;
+    padding: 32px;
+
+    background-color: var(--card);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.meta-hero-text {
+    padding: 12px 0 12px 12px;
+}
+
+.meta-hero h1 {
+    font-family: Georgia, serif;
+    color: var(--green-dark);
+    font-size: clamp(34px, 4vw, 49px);
+    line-height: 1.08;
+    margin: 13px 0 18px;
+}
+
+.meta-hero p {
+    font-size: 17px;
+    max-width: 480px;
+    margin-bottom: 23px;
+}
+
+.meta-hero img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* 5. ARTIKEL LAYOUT */
+
+.article-layout {
+    width: 88%;
+    max-width: 1120px;
+    margin: 0 auto 65px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 0.8fr);
+
+    gap: 55px;
+    align-items: start;
+}
+
+.article-main {
+    min-width: 0;
+}
+
+.article-main p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 20px;
+}
+
+.article-main .article-intro {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--green-dark);
+}
+
+.article-main h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    line-height: 1.2;
+    color: var(--green-dark);
+    margin: 38px 0 14px;
+}
+
+
+/* 6. CITAT */
+
+.quote-box {
+    margin: 32px 0;
+    padding: 25px 30px;
+
+    background-color: #E3E5D9;
+    border-left: 4px solid var(--green);
+    border-radius: 0 12px 12px 0;
+}
+
+.quote-mark {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 0.8;
+    color: var(--green);
+}
+
+.quote-box p {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    color: var(--green-dark);
+    margin: 8px 0 0;
+}
+
+
+/* 7. FUNKTIONSKORT */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 24px 0 34px;
+}
+
+.feature-card {
+    background-color: var(--card);
+    border-radius: 12px;
+    padding: 20px 17px;
+}
+
+.feature-icon {
+    font-size: 27px;
+    color: var(--green);
+    margin-bottom: 8px;
+}
+
+.feature-card h3 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+/* 8. REFLEKSIONSFELT */
+
+.reflection-box {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+
+    margin: 34px 0;
+    padding: 24px;
+
+    background-color: var(--sage);
+    border-radius: 12px;
+}
+
+.reflection-symbol {
+    font-size: 34px;
+    color: var(--green-dark);
+}
+
+.reflection-box h2 {
+    font-size: 24px;
+    margin: 0 0 7px;
+}
+
+.reflection-box p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+/* 9. AFSLUTTENDE ARTIKELBOKS */
+
+.article-end {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: var(--card);
+    border-radius: 12px;
+}
+
+.article-end p {
+    margin: 12px 0 0;
+}
+
+
+/* 10. SIDEBAR */
+
+.article-sidebar {
+    position: sticky;
+    top: 25px;
+}
+
+.sidebar-card,
+.sidebar-note {
+    padding: 23px;
+    background-color: var(--card);
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+.sidebar-card h2,
+.sidebar-note h2 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: var(--green-dark);
+    margin-bottom: 15px;
+}
+
+.sidebar-card a {
+    display: block;
+    padding: 12px 0;
+    border-top: 1px solid #D4D0C7;
+
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sidebar-card a span {
+    float: right;
+    color: var(--green);
+}
+
+.sidebar-card a:hover {
+    color: var(--green);
+}
+
+.sidebar-note {
+    background-color: #E3E5D9;
+}
+
+.sidebar-note p {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* 11. RESPONSIVT DESIGN – TABLET */
+
+@media (max-width: 900px) {
+
+    .meta-hero,
+    .article-layout {
+        width: 92%;
+    }
+
+    .article-layout {
+        gap: 25px;
+    }
+
+    .meta-hero {
+        gap: 22px;
+        padding: 24px;
+    }
+
+    .meta-hero img {
+        height: 280px;
+    }
+
+}
+
+
+/* 12. RESPONSIVT DESIGN – MOBIL */
+
+@media (max-width: 680px) {
+
+    .breadcrumb {
+        width: 90%;
+    }
+
+    .meta-hero {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 22px;
+        margin-bottom: 32px;
+    }
+
+    .meta-hero-text {
+        padding: 0;
+    }
+
+    .meta-hero h1 {
+        font-size: 34px;
+    }
+
+    .meta-hero p {
+        font-size: 16px;
+    }
+
+    .meta-hero img {
+        height: 220px;
+        grid-row: 2;
+    }
+
+    .article-layout {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .article-main .article-intro {
+        font-size: 19px;
+    }
+
+    .article-main h2 {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    .article-main p {
+        font-size: 15px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        display: grid;
+        grid-template-columns: 35px 1fr;
+        column-gap: 10px;
+    }
+
+    .feature-icon {
+        grid-row: span 2;
+    }
+
+    .feature-card h3 {
+        align-self: end;
+    }
+
+    .feature-card p {
+        grid-column: 2;
+    }
+
+    .article-sidebar {
+        position: static;
+    }
+
+    .quote-box {
+        padding: 22px;
+    }
+
+    .quote-box p {
+        font-size: 19px;
+    }
+
+}
+
+
+
+/* KONTAKTFORMULAR-SIDEN */
+
+body {
+    background-color: #f8f5f0;
+    color: #252923;
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVIGATION */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 6%;
+    background-color: #efede6;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #303a30;
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #252923;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #697562;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 25px;
+}
+
+
+/* HERO */
+
+.contact-hero {
+    min-height: 350px;
+    background-color: #eae7df;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(234,231,223,0.98),
+        rgba(234,231,223,0.65)
+    );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.overline {
+    color: #697562;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    line-height: 1.1;
+    color: #303a30;
+    margin-bottom: 20px;
+}
+
+.hero-content p:last-child {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+
+/* KONTAKTOMRÅDE */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.contact-intro {
+    padding-top: 20px;
+}
+
+.category {
+    display: inline-block;
+    background-color: #d9ddce;
+    color: #303a30;
+    padding: 8px 17px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.contact-intro h2,
+.contact-form-container h2 {
+    font-family: Georgia, serif;
+    color: #303a30;
+    font-size: 34px;
+    margin-bottom: 22px;
+}
+
+.contact-intro p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #555950;
+    margin-bottom: 20px;
+}
+
+.contact-note {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #e5e7dc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 35px;
+}
+
+.contact-note span {
+    font-size: 30px;
+    color: #697562;
+}
+
+.contact-note p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+
+/* KONTAKTFORMULAR */
+
+.contact-form-container {
+    background-color: #fffdfa;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+}
+
+.contact-form-container h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form-description {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #303a30;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #deded6;
+    border-radius: 7px;
+    background-color: #faf9f6;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #303a30;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #697562;
+    box-shadow: 0 0 0 2px rgba(105,117,98,0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.privacy-text {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* SEND-KNAP */
+
+.submit-button {
+    background-color: #596657;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button span {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+.submit-button:hover {
+    background-color: #414d40;
+    transform: translateY(-2px);
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #414c40;
+    color: white;
+    padding: 30px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.footer-logo {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    line-height: 0.9;
+}
+
+.footer p {
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBILVENLIGT DESIGN */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .contact-hero {
+        padding: 55px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 45px auto;
+        padding: 0 6%;
+    }
+
+    .contact-form-container {
+        padding: 25px;
+    }
+
+    .contact-intro h2 {
+        font-size: 29px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
